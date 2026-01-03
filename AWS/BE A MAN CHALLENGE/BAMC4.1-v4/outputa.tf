@@ -1,0 +1,36 @@
+# output "instance_ip" {
+#   value = "http://${aws_instance.crossroads-server.public_ip}"
+# }
+
+output "sample" {
+  description = "demo for output"
+  value       = "sample"
+}
+
+output "ip_address" {
+  value = aws_instance.epstein-bestie.associate_public_ip_address
+}
+
+# output "website_url" {
+#   value = "http://${aws_instance.shadow-vm.public_dns}"
+# }
+
+# output "load_balancer_dns" {
+#   value = "http://${aws_lb.shadow-alb.dns_name}"
+# }
+
+output "key_name" {
+  value = aws_key_pair.bamc-key-pair.key_name
+}
+
+output "website_url" {
+  value = "http://${aws_instance.linux-backend-01.private_dns}"
+}
+
+# output "website_url" {
+#   value = "http://${aws_instance.linux-backend-02.private_dns}"
+# }
+
+# output "website_url" {
+#   value = "http://${aws_instance.linux-backend-03.private_dns}"
+# }
